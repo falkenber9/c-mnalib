@@ -1,0 +1,12 @@
+at!selrat?
+!SELRAT: 06, LTE Only
+
+
+OK
+at!selrat=00
+OK
+at!selrat?
+!SELRAT: 00, Automatic
+
+
+OK

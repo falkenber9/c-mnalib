@@ -1,0 +1,22 @@
+at+cops=1,2,26201
++CME ERROR: SIM failure
+at+cops=1,2,26201,2
+OK
+at+cops=1,2,26201,7
+OK
+at+cops=?
++cops: (1,"Vodafone.de","Vodafone","26202",2),(1,"E-Plus","E-Plus","26203",7),(1,"Telekom.de","TDG","26201",7),(1,"E-Plus","E-Plus","26203",2),(1,"Telekom.de","TDG","26201",2),,(0,1,2,3,4),(0,1,2)
+
+OK
+at+cops=?
++cops: (1,"Telekom.de","TDG","26201",7),,(0,1,2,3,4),(0,1,2)
+
+OK
+at+cops?
++COPS: 0
+
+OK
+at+cops?
++cops: 0,0,"Telekom.de Telekom.de",7
+
+OK

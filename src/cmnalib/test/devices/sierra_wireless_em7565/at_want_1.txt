@@ -1,0 +1,12 @@
+at+want?
++WANT: 0 
+
+
+OK
+at+want=1
+OK
+at+want?
++WANT: 1 
+
+
+OK

@@ -1,0 +1,18 @@
+at!gpsautostart?
+  function:  0
+  fixtype: 1
+  maxtime: 180 seconds
+  maxdist: 50 meters
+  fixrate: 1 seconds
+
+OK
+at!gpsautostart=1
+OK
+at!gpsautostart?
+  function:  1
+  fixtype: 1
+  maxtime: 180 seconds
+  maxdist: 50 meters
+  fixrate: 1 seconds
+
+OK

@@ -1,0 +1,23 @@
+at!gstatus?
+!GSTATUS: 
+Current Time:  7480             Temperature: 34
+Reset Counter: 1                Mode:        ONLINE         
+System mode:   LTE              PS state:    Not attached 
+LTE band:      B3               LTE bw:      20 MHz  
+LTE Rx chan:   1300             LTE Tx chan: 19300
+LTE SSC1 state:NOT ASSIGNED
+LTE SSC2 state:NOT ASSIGNED
+LTE SSC3 state:NOT ASSIGNED
+LTE SSC4 state:NOT ASSIGNED
+EMM state:     Deregistered     Attach Needed  
+RRC state:     RRC Idle       
+IMS reg state: No Srv   
+
+PCC RxM RSSI:  -49              PCC RxM RSRP:  -80
+PCC RxD RSSI:  -92              PCC RxD RSRP:  -131
+Tx Power:      --               TAC:         34bb (13499)
+RSRQ (dB):     -10.7            Cell ID:     01c07902 (29391106)
+SINR (dB):      5.2
+
+
+OK

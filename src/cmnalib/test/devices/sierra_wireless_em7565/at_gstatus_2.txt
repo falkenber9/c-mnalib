@@ -1,0 +1,7 @@
+at!gstatus?
+!GSTATUS: 
+Current Time:  6334             Temperature: 37
+Reset Counter: 2                Mode:        LOW POWER MODE 
+
+
+OK

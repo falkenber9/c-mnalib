@@ -1,0 +1,8 @@
+at!entercnd?
+ERROR
+at!entercnd="A710"
+OK
+at!entercnd?
+A710
+
+OK

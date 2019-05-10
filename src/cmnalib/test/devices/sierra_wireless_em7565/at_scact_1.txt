@@ -1,0 +1,14 @@
+at!scact=1,1
+OK
+at!scact?
+!SCACT: 1,1
+
+OK
+at!scact=0,1
+OK
+at!scact?
+!SCACT: 1,0
+
+OK
+at!scact=1,0
+ERROR

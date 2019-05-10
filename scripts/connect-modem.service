@@ -1,0 +1,9 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/alarm/projects/c-mnalib/c-manlib.git/scripts/connect-modem.sh
+
+[Install]
+WantedBy=default.target

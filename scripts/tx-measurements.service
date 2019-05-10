@@ -1,0 +1,9 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/robert/Projekte/c-mnalib/c-manlib.git/scripts/tx-measurements.sh
+
+[Install]
+WantedBy=default.target

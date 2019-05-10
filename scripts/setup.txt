@@ -1,0 +1,12 @@
+# sudo su
+# ssh-copy-id ng40@129.217.211.43
+# ssh ng40@129.217.211.43
+
+ 
+# cp tx-measurements.service /etc/systemd/system/
+
+# chmod 664 /etc/systemd/system/tx-measurements.service
+# systemctl daemon-reload
+
+# systemctl start tx-measurements
+# systemctl enable tx-measurements

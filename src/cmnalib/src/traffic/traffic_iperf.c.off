@@ -1,0 +1,40 @@
+
+#include <iperf_api.h>
+
+#include "traffic_iperf.h"
+#include "util/logger.h"
+
+void iperf_my_reporter_callback(struct iperf_test* test) {
+    DEBUG("Reporter Callback called\n");
+    iperf_reporter_callback(test);
+}
+
+void tr_iperf_run() {
+
+    char host[] = "129.217.211.30";
+    int port = 31415; //5201;
+    struct iperf_test* h;
+
+    h = iperf_new_test();
+    iperf_defaults(h);
+
+//    iperf_set_verbose(h, 1);
+
+    iperf_set_test_role(h, 'c');
+    iperf_set_test_server_hostname(h, host);
+    iperf_set_test_server_port(h, port);
+    /* iperf_set_test_reverse(h, 1); */
+    iperf_set_test_omit(h, 3);
+    iperf_set_test_duration(h, 5);
+//    iperf_set_test_reporter_interval(h, 1);
+//    iperf_set_test_stats_interval(h, 1);
+    /* iperf_set_test_json_output(test, 1); */
+
+    if (iperf_run_client(h) < 0) {
+        ERROR("iperf error: %s\n", iperf_strerror(i_errno));
+        return;
+    }
+
+    iperf_free_test(h);
+
+}

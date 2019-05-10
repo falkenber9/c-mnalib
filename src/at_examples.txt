@@ -1,0 +1,89 @@
+#screen /dev/ttyUSB1
+
+
+at!gstatus?
+!GSTATUS: 
+Current Time:  66403            Temperature: 25
+Reset Counter: 1                Mode:        ONLINE         
+System mode:   LTE              PS state:    Attached     
+LTE band:      B20              LTE bw:      10 MHz  
+LTE Rx chan:   6400             LTE Tx chan: 4294967295
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered       PLMN Search    
+RRC state:     RRC Idle       
+IMS reg state: No Srv   
+
+PCC RxM RSSI:  -71              RSRP (dBm):  -98
+PCC RxD RSSI:  -68              RSRP (dBm):  -94
+Tx Power:      0                TAC:         34BB (13499)
+RSRQ (dB):     -8.5             Cell ID:     01DAA004 (31105028)
+SINR (dB):     11.8
+
+
+OK
+
+
+
+at!lteinfo?
+!LTEINFO: 
+Serving:   EARFCN MCC MNC   TAC      CID Bd D U SNR PCI  RSRQ   RSRP   RSSI RXLV
+             6400 262  01 13499 01DAA004 20 3 3   7 476  -9.1  -97.1  -71.1  24
+
+IntraFreq:                                          PCI  RSRQ   RSRP   RSSI RXLV
+                                                    476  -9.1  -97.1  -71.1  24
+                                                    210 -10.1 -100.4  -81.4  24
+                                                    486  -7.9 -104.0  -87.1  24
+
+InterFreq: EARFCN ThresholdLow ThresholdHi Priority PCI  RSRQ   RSRP   RSSI RXLV
+             3749            0          16      255   0   0.0    0.0    0.0   0
+             3749            0          16      255 191 -12.2 -104.6  -83.3   0
+             3749            0          16      255 190 -12.7 -107.0  -83.3   0
+             3749            0          16      255 364 -14.8 -108.8  -85.1   0
+             3749            0          16      255 277 -20.0 -116.3  -87.0   0
+             3749            0          16      255  32 -20.0 -118.1  -86.2   0
+             3749            0          16      255   0   0.0    0.0    0.0   0
+             1300            0          12      255 418 -12.3 -101.7  -79.6   0
+             1300            0          12      255 417 -16.4 -105.6  -79.6   0
+             1300            0          12      255 353 -16.3 -107.2  -81.8   0
+             1300            0          12      255 222 -18.9 -109.4  -81.0   0
+             1300            0          12      255 351 -19.6 -110.4  -81.8   0
+             1300            0          12      255 188 -17.4 -110.5  -84.1   0
+
+GSM:       ThreshL ThreshH Prio NCC ARFCN 1900 valid BSIC RSSI RXLV
+
+WCDMA:     UARFCN ThreshL ThreshH Prio PSC   RSCP  ECN0 RXLV
+
+CDMA 1x:   Chan BC Offset Phase Str
+
+CDMA HRPD: Chan BC Offset Phase Str
+
+
+OK
+
+
+=========
+QTCOM
+=========
+at!gstatus?
+
+!GSTATUS: 
+Current Time:  318		Temperature: 26
+Reset Counter: 1		Mode:        ONLINE         
+System mode:   LTE        	PS state:    Attached     
+LTE band:      B7     		LTE bw:      20 MHz  
+LTE Rx chan:   3350		LTE Tx chan: 21350
+LTE CA state:  NOT ASSIGNED
+EMM state:     Registered     	Normal Service 
+RRC state:     RRC Idle       
+IMS reg state: No Srv  		
+
+PCC RxM RSSI:  -80		RSRP (dBm):  -104
+PCC RxD RSSI:  -77		RSRP (dBm):  -100
+Tx Power:      0		TAC:         0001 (1)
+RSRQ (dB):     -3.2		Cell ID:     01A2D001 (27447297)
+SINR (dB):     21.6
+
+
+OK
+
+ 

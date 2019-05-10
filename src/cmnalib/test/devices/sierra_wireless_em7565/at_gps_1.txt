@@ -1,0 +1,16 @@
+at!gpstrack=1,30,1000,1000,1
+OK
+at!gpsloc?
+Not Available
+
+OK
+at!gpsloc?
+Lat: 51 Deg 29 Min 31.01 Sec N  (0x0092774B)
+Lon: 7 Deg 24 Min 43.66 Sec E  (0x00151559)
+Time: 2018 08 09 3 10:49:02 (GPS) 
+LocUncAngle: 0.7 deg  LocUncA: 4 m  LocUncP: 3 m  HEPE: 5.000 m
+3D Fix 
+Altitude: 151 m  LocUncVe: 8.0 m
+Heading: 1.1 deg  VelHoriz: 3.2 m/s  VelVert: 6.6 m/s
+
+OK
