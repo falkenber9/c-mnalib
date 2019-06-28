@@ -1,0 +1,43 @@
+stages:
+  - environment
+  - build
+  - test
+
+before_script:
+  - docker info
+
+E_Arch:
+  stage: environment
+  script:
+    - cd $CI_PROJECT_DIR/_gitlab-ci/docker/Archlinux
+    - docker rmi ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/archlinux_base:latest || true
+    - docker build --no-cache -t ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/archlinux_base:latest --target archlinux_base --build-arg OS_VERSION=latest .
+
+E_Ubnt20:
+  stage: environment
+  script:
+    - cd $CI_PROJECT_DIR/_gitlab-ci/docker/Ubuntu
+    - docker rmi ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:focal || true
+    - docker build --no-cache -t ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:focal --target ubuntu_deps --build-arg OS_VERSION=focal .
+
+E_Ubnt18:
+  stage: environment
+  script:
+    - cd $CI_PROJECT_DIR/_gitlab-ci/docker/Ubuntu
+    - docker rmi ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:bionic || true
+    - docker build --no-cache -t ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:bionic --target ubuntu_deps --build-arg OS_VERSION=bionic .
+
+B_Arch:
+  stage: build
+  script:
+    - docker run --rm -v `pwd`/.:/c-mnalib -v /tmp:/tmp/tmp-host -i ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/archlinux_base:latest /c-mnalib/_gitlab-ci/testscripts/./test_all.sh ~/c-mnalib-build /tmp
+
+B_Ubnt20:
+  stage: build
+  script:
+    - docker run --rm -v `pwd`/.:/c-mnalib -v /tmp:/tmp/tmp-host -i ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:focal /c-mnalib/_gitlab-ci/testscripts/./test_all.sh ~/c-mnalib-build /tmp
+
+B_Ubnt18:
+  stage: build
+  script:
+    - docker run --rm -v `pwd`/.:/c-mnalib -v /tmp:/tmp/tmp-host -i ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/ubuntu_deps:bionic /c-mnalib/_gitlab-ci/testscripts/./test_all.sh ~/c-mnalib-build /tmp

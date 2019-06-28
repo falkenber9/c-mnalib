@@ -1,0 +1,12 @@
+# ignore the following patterns
+build/*
+log/*
+CMakeLists.txt.user 
+
+# Ignore all hidden files
+.*
+# Hidden files exceptions
+!/.gitignore
+
+# Ignore private files
+_*

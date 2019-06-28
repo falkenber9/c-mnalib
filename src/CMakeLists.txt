@@ -29,7 +29,8 @@ link_directories(${GLIB2_LIBRARY_DIRS} ${GIO2_LIBRARY_DIRS} ${LIBUDEV_LIBRARY_DI
 include_directories(".")
 
 # collect all commonly used lib-dirs
-set(libraries ${GLIB2_LIBRARIES} ${LIBUDEV_LIBRARIES} ${CURL_LIBRARIES} m)
+set(COMMON_LIBRARIES ${GLIB2_LIBRARIES} ${LIBUDEV_LIBRARIES} ${CURL_LIBRARIES} m)
+#message(${COMMON_LIBRARIES})
 
 add_subdirectory(cmnalib)
 add_subdirectory(examples)

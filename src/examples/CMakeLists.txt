@@ -15,8 +15,8 @@ target_link_libraries(enum_sw cmnalib ${CMAKE_THREAD_LIBS_INIT})
 
 add_executable(interface_test src/interface_test.c)
 #target_link_libraries(traffic_test ${libraries} Threads::Threads)
-target_link_libraries(interface_test cmnalib) 
+target_link_libraries(interface_test cmnalib)
 
 add_executable(param_log src/param_log.c)
 #target_link_libraries(traffic_test ${libraries} Threads::Threads)
-target_link_libraries(param_log cmnalib) 
+target_link_libraries(param_log cmnalib)
